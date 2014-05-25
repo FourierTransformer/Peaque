@@ -8,7 +8,7 @@ Peaque can be installed as a submodule by using the following:
     
     git submodule add git://github.com/FourierTransformer/Peaque.git
 
-This allows for some fancy features. Check out git submodules: http://git-scm.com/book/en/Git-Tools-Submodules
+This allows for some fancy features. Check out git submodules: http://git-scm.com/book/en/Git-Tools-Submodules. You can then use the require function: `local Peaque = require('Peaque/Peaque')`
 
 or you can also just clone this repo and copy `Peaque.lua` out manually:
 
