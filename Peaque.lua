@@ -6,6 +6,11 @@
 -- @license MIT
 -- @script peaque
 local setmetatable = setmetatable
+local floor = math.floor
+local ipairs = ipairs
+local assert = assert
+local remove = table.remove
+
 
 -- Internal class constructor
 local class = function(...)
@@ -22,7 +27,7 @@ end
 
 -- get the parent's index
 local function parent(i)
-    return math.floor(i/2)
+    return floor(i/2)
 end
 
 -- get the left child's index
@@ -143,7 +148,7 @@ function Heap:pop()
     assert(#self.A > 0, "Heap is currently empty, there is nothing to pop")
     local max = self.A[1]
     self.A[1] = self.A[#self.A]
-    table.remove(self.A, #self.A)
+    remove(self.A, #self.A)
     minHeapify(self.A, 1)
     return max.data
 end
